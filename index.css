@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+html, body, * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.head-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.post {
+    padding-bottom: 10px;
+}
+
+.logo-img {
+    width: 127px;
+}
+
+.user-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+}
+
+.user-desc {
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.user-desc .name {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.user-desc .location {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.post-img-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-desc {
+    padding: 10px 15px; ;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.btn-wrapper button {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-wrapper img {
+    width: 24px;
+    height: 27px;
+}
+
+
+.btn-wrapper button:hover,
+.btn-wrapper button:focus {
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
+    outline: none;
+}
+
+.likes {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.comments {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+
+
+
+
