@@ -6,7 +6,8 @@ const posts = [
         avatar: "/images/avatar-vangogh.jpg",
         post: "/images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
-        likes: 21
+        likes: 21,
+        isLiked: false
     },
     {
         name: "Gustave Courbet",
@@ -15,7 +16,8 @@ const posts = [
         avatar: "/images/avatar-courbet.jpg",
         post: "/images/post-courbet.jpg",
         comment: "i'm feelin a bit stressed tbh",
-        likes: 4
+        likes: 4,
+        isLiked: false
     },
     {
         name: "Joseph Ducreux",
@@ -24,7 +26,8 @@ const posts = [
         avatar: "/images/avatar-ducreux.jpg",
         post: "/images/post-ducreux.jpg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
+        likes: 152,
+        isLiked: false
     }
 ]
 
@@ -71,19 +74,18 @@ function renderLikes() {
     const likesEl = document.querySelectorAll("#likes");
     const heartIcons = document.querySelectorAll("#heart-icon");
     const imagesEl = document.querySelectorAll(".post-img-wrapper");
-    let isLiked = false;
 
     function handleInput(i) {
-        if (isLiked === false) {
+        if (posts[i].isLiked === false) {
             heartIcons[i].style.filter = "invert(44%) sepia(94%) saturate(7473%) hue-rotate(353deg) brightness(91%) contrast(127%)";
             posts[i].likes += 1;
             likesEl[i].textContent = `${posts[i].likes} likes`;
-            isLiked = true;
+            posts[i].isLiked = true;
         } else {
             heartIcons[i].style.filter = "invert(0%) sepia(6%) saturate(7476%) hue-rotate(328deg) brightness(103%) contrast(106%)";
             posts[i].likes -= 1;
             likesEl[i].textContent = `${posts[i].likes} likes`;
-            isLiked = false;
+            posts[i].isLiked = false;
         }
     }
 
